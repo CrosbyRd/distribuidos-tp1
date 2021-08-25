@@ -66,6 +66,8 @@ namespace back
                 endpoints.MapControllers();
                 endpoints.MapHub<CentralHub>("/socket");
             });
+
+            app.SeedTestData();
         }
     }
 }
