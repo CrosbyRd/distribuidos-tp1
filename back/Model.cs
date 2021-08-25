@@ -6,6 +6,9 @@ namespace back
 {
     public class UtiContext : DbContext
     {
+        public UtiContext(DbContextOptions<UtiContext> options) : base(options)
+        {
+        }
         public DbSet<Cama> Camas { get; set; }
         public DbSet<Hospital> Hospitales { get; set; }
         public DbSet<Log> Logs { get; set; }
@@ -21,5 +24,10 @@ namespace back
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite($"Data Source={DbPath}");
         
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(UtiContext).Assembly);
+        }
     }
 }
