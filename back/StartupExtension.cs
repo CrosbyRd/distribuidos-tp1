@@ -82,7 +82,130 @@ namespace back
             };
 
             context.Hospitales.Add(hospital9);
+
+            var cama1 = new Cama
+            {
+                HospitalId = hospital1.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama1);
             
+            var cama2 = new Cama
+            {
+                HospitalId = hospital1.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama2);
+            
+            var cama3 = new Cama
+            {
+                HospitalId = hospital2.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama3);
+            
+            var cama4 = new Cama
+            {
+                HospitalId = hospital2.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama4);
+            
+            
+            var cama5 = new Cama
+            {
+                HospitalId = hospital3.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama5);
+            
+            var cama6 = new Cama
+            {
+                HospitalId = hospital3.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama6);
+            var cama7 = new Cama
+            {
+                HospitalId = hospital4.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama7);
+            var cama8 = new Cama
+            {
+                HospitalId = hospital4.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama8);
+            var cama9 = new Cama
+            {
+                HospitalId = hospital5.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama9);
+            var cama10 = new Cama
+            {
+                HospitalId = hospital5.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama10);
+            var cama11 = new Cama
+            {
+                HospitalId = hospital6.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama11);
+            var cama12 = new Cama
+            {
+                HospitalId = hospital6.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama12);
+            var cama13 = new Cama
+            {
+                HospitalId = hospital7.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama13);
+            var cama14 = new Cama
+            {
+                HospitalId = hospital7.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama14);
+            var cama15 = new Cama
+            {
+                HospitalId = hospital8.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama15);
+            var cama16 = new Cama
+            {
+                HospitalId = hospital8.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama16);
+            var cama17 = new Cama
+            {
+                HospitalId = hospital9.Id,
+                Orden = 1
+            };
+            context.Camas.Add(cama17);
+            var cama18 = new Cama
+            {
+                HospitalId = hospital9.Id,
+                Orden = 2,
+                EstaOcupado = true
+            };
+            context.Camas.Add(cama18);
             context.SaveChanges();
             return app;
         }
