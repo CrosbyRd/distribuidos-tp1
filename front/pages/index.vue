@@ -1,77 +1,42 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      <div>
+        <v-select rounded outlined label="Seleccione la accion que desea realizar: " :items="actions" :item-value="actions.value" clearable>
+        </v-select>
+        <v-select rounded outlined label="Hospital" clearable>
+        </v-select>
+        <v-select rounded outlined label="Cama" clearable></v-select>
+      </div>
+      <div class="d-flex justify-center">
+        <p class="text-h3">
+          o
+        </p>
+      </div>
+      <v-row class="d-flex justify-center">
+        <v-col cols="12" class="d-flex justify-center">
+          Tipee en la consola lo que desea ejecutar
+        </v-col>
+        <v-col cols="12">
+          <v-textarea background-color="blue" class="text--white" outlined clearable>
+          </v-textarea>
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>
+<script lang="ts">
+import Vuetify from "vuetify";
+import Vue from "vue";
+export default Vue.extend({
+  data: () => ({
+    actions: [
+      {text: 'Ver Estado de una cama',value: 1 },
+      {text: 'Agregar una cama', value: 2},
+      {text: 'Eliminar una cama', value: 3},
+      {text: 'Ver el estado de un hospital', value: 4},
+      {text: 'Ver el estado de todos los hospitales', value: 5}
+    ]
+  }),
+})
+</script>
