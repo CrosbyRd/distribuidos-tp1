@@ -9,8 +9,8 @@ using back;
 namespace back.Migrations
 {
     [DbContext(typeof(UtiContext))]
-    [Migration("20210827025900_Test")]
-    partial class Test
+    [Migration("20210828154339_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

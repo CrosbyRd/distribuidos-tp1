@@ -11,20 +11,16 @@ namespace back
     {
         public UtiContext(DbContextOptions<UtiContext> options) : base(options)
         {
+            var folder = Environment.SpecialFolder.LocalApplicationData;
+            var path = Environment.GetFolderPath(folder);
+            DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}uti-distribuidos.db";
         }
         public DbSet<Cama> Camas { get; set; }
         public DbSet<Hospital> Hospitales { get; set; }
         public DbSet<Log> Logs { get; set; }
         public string DbPath { get; private set; }
 
-        public UtiContext()
-        {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-            DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}uti-distribuidos.db";
-        }
-        
-        
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             var entries = ChangeTracker
@@ -52,7 +48,7 @@ namespace back
             return base.SaveChangesAsync(cancellationToken);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite($"Data Source={DbPath}");
+            => options.UseSqlite($"Data Source={DbPath};");
         
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)

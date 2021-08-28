@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using back.Controllers;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace back
@@ -29,15 +31,12 @@ namespace back
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "back", Version = "v1" });
-            });
-            
-            services.AddDbContext<UtiContext>(options => options.EnableSensitiveDataLogging());
-            
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "back", Version = "v1" }); });
+
+
+            services.AddDbContext<UtiContext>(options => options.UseSqlite().EnableSensitiveDataLogging());
+
             services.AddAutoMapper(typeof(Startup).Assembly);
             services.AddSignalR();
 
@@ -53,6 +52,7 @@ namespace back
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "back v1"));
+                ApplyMigrationsIfAny(app);
             }
 
             app.UseHttpsRedirection();
@@ -68,6 +68,18 @@ namespace back
             });
 
             app.SeedTestData();
+        }
+
+        private static void ApplyMigrationsIfAny(IApplicationBuilder app)
+        {
+            using var scope = app.ApplicationServices.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<UtiContext>();
+            var migrations = context.Database.GetPendingMigrations();
+            if (migrations.Any())
+            {
+                File.Delete(context.DbPath); 
+                context.Database.Migrate();
+            }
         }
     }
 }
