@@ -4,7 +4,7 @@
 - [Integrandes](#1)
     
 - [Websockets](#2) 
-    - [Descripcion del protocolo](#2.1)
+    + [Descripcion del protocolo](#2.1)
         - [Apertura de apretón de manos](#2.1.1)
         - [Apretón de manos de cierre](#2.1.2)  
     - [Filosofia de diseño](#2.2)       
