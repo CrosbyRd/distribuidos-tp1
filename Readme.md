@@ -193,9 +193,7 @@ Los campos de encabezado adicionales se utilizan para seleccionar opciones en We
    protocolo basado en tramas en lugar de basado en flujo y para admitir un
    distinción entre texto Unicode y marcos binarios). Se espera
    que la aplicación superpondría los metadatos a WebSocket       
-          
-    capa, de la misma manera que los metadatos se superponen sobre TCP por el
-   capa de aplicación (por ejemplo, HTTP).
+   capa.
 
    Conceptualmente, WebSocket es en realidad solo una capa sobre TCP que
    hace lo siguiente:
