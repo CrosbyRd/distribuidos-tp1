@@ -907,7 +907,7 @@ Para cerrar una conexión WebSocket, se envía un marco de cierre (código de op
 ### 5          
 ### Cómo ejecutar el/los cliente        
           
-     En el caso del cliente, debe descargar NPM y dentro de la carpeta del proyecto debe ejecutarse un comando llamado "npm update" y despues "npm run dev"     
+ En el caso del cliente, debe descargar NPM y dentro de la carpeta del proyecto debe ejecutarse un comando llamado "npm update" y despues "npm run dev"     
           
 ### 6
 ## Documentación de un API de servicios ofrecidos por el Servidor.          
