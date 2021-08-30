@@ -4,7 +4,7 @@
 - [Integrandes](#1)
     
 - [Websockets](#2) 
-    * [Descripcion del protocolo](#2.1)
+    * [Descripcion del protocolo](#2-1)
         + [Apertura de apretón de manos](#2.1.1)
         + [Apretón de manos de cierre](#2.1.2)  
     * [Filosofia de diseño](#2.2)       
@@ -50,7 +50,7 @@ Un WebSocket es una conexión persistente entre un cliente y un servidor. WebSoc
 
 La idea de WebSockets surgió de las limitaciones de la tecnología basada en HTTP. Con HTTP, un cliente solicita un recurso y el servidor responde con los datos solicitados. HTTP es un protocolo estrictamente unidireccional: cualquier dato enviado desde el servidor al cliente debe ser solicitado primero por el cliente. El sondeo largo ha actuado tradicionalmente como una solución para esta limitación. Con el sondeo prolongado, un cliente realiza una solicitud HTTP con un período de tiempo de espera prolongado, y el servidor usa ese tiempo de espera prolongado para enviar datos al cliente. El sondeo largo funciona, pero tiene un inconveniente: los recursos del servidor están atados a lo largo del sondeo largo, incluso cuando no hay datos disponibles para enviar.
  
-### 2.1          
+### 2-1          
 #### Descripcion del protocolo
 
 > El protocolo consiste en un apretón de manos de apertura seguido de un encuadre de mensaje básico, en capas sobre TCP.
