@@ -818,13 +818,8 @@ La Payload dataincluye datos de aplicaciones arbitrarias y cualquier dato de ext
           los valores de | Sec-WebSocket-Extensions | campo. los
           la ausencia de dicho campo es equivalente al valor nulo. los
           cadena vacía no es lo mismo que el valor nulo para estos
-
-         El protocolo WebSocket Diciembre de 2011
-
-
           propósitos. Las extensiones no enumeradas por el cliente NO DEBEN ser
-          enumerados. El método por el cual se deben seleccionar estos valores
-          e interpretado se discute en la Sección 9.1 .
+          enumerados. 
 
    5. Si el servidor elige aceptar la conexión entrante, DEBE
        responda con una respuesta HTTP válida que indique lo siguiente.
