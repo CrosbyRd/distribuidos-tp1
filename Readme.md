@@ -862,8 +862,8 @@ La Payload dataincluye datos de aplicaciones arbitrarias y cualquier dato de ext
    "s3pPLMBiTxaQ9kYGzzhZRbK + xOo =", que se devolvería en el
    | Sec-WebSocket-Accept | campo de encabezado.
 
-       5. Opcionalmente, un | Sec-WebSocket-Protocol | campo de encabezado, con un
-           value / subprotocol / como se define en el paso 4 de la Sección 4.2.2 .
+  5. Opcionalmente, un | Sec-WebSocket-Protocol | campo de encabezado, con un
+   value / subprotocol / .
           
 ### 2-8          
 ### Cerrar una conexión de WebSocket: el protocolo de enlace de cierre de WebSocket
