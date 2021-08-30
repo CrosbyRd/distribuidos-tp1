@@ -188,7 +188,7 @@ Los campos de encabezado adicionales se utilizan para seleccionar opciones en We
 ### 2-2       
 #### Filosofía de diseño
 
-    El protocolo WebSocket está diseñado según el principio de que debe
+   El protocolo WebSocket está diseñado según el principio de que debe
    ser un encuadre mínimo (el único encuadre que existe es hacer que el
    protocolo basado en tramas en lugar de basado en flujo y para admitir un
    distinción entre texto Unicode y marcos binarios). Se espera
