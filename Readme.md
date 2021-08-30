@@ -68,7 +68,7 @@ $$"ws:" "//" host [ ":" port ] path [ "?" query ]$$
 $$"wss:" "//" host [ ":" port ] path [ "?" query ]$$
 
 ---
-### 2.1.1     
+### 2-1-1     
 #### Apertura de apretón de manos
 
 
@@ -152,7 +152,7 @@ Los campos de encabezado adicionales se utilizan para seleccionar opciones en We
    [RFC4648] ), de esta concatenación se devuelve en el servidor
    apretón de manos.
 
-### 2.1.2          
+### 2-1-2          
 #### Apretón de manos de cierre
 
   
@@ -185,7 +185,7 @@ Los campos de encabezado adicionales se utilizan para seleccionar opciones en We
    fallar para la parte que recibió el RST, incluso si había datos
    esperando ser leído.
   
-### 2.2       
+### 2-2       
 #### Filosofía de diseño
 
     El protocolo WebSocket está diseñado según el principio de que debe
@@ -228,7 +228,7 @@ Los campos de encabezado adicionales se utilizan para seleccionar opciones en We
    El protocolo está destinado a ser extensible; futuras versiones
    probablemente introduzca conceptos adicionales como multiplexación      
    
-### 2.3         
+### 2-3         
 ####  Modelo de seguridad
 
    El protocolo WebSocket utiliza el modelo de origen utilizado por los navegadores web para
@@ -259,7 +259,7 @@ Los campos de encabezado adicionales se utilizan para seleccionar opciones en We
    como XMLHttpRequest [ XMLHttpRequest ].      
 
 
-### 2.4
+### 2-4
     
 #### El protocolo Websockets
 
@@ -288,7 +288,7 @@ WebSocket es un protocolo enmarcado , lo que significa que un fragmento de datos
 +---------------------------------------------------------------+
 </pre>
 </p>
-### 2.4.1
+### 2-4-1
  #### Subprotocolos que utilizan el protocolo WebSocket
 
    El cliente puede solicitar que el servidor utilice un subprotocolo específico mediante
@@ -315,15 +315,15 @@ WebSocket es un protocolo enmarcado , lo que significa que un fragmento de datos
    clientela. El control de versiones compatible con versiones anteriores se puede implementar
    reutilizando la misma cadena de subprotocolo pero diseñando cuidadosamente el
    subprotocolo real para soportar este tipo de extensibilidad.          
-### 2.4.2         
+### 2-4-2         
 #### Bit de aleta
 El primer bit del encabezado de WebSocket es el bit Fin. Este bit se establece si esta trama es el último dato para completar este mensaje. 
 
-### 2.4.3   
+### 2-4-3   
 #### Bits RSV1, RSV2, RSV3
 Estos bits están reservados para uso futuro.
 
-### 2.4.4    
+### 2-4-4    
 #### Código de operación
 Cada cuadro tiene un código de operación que determina cómo interpretar los datos de carga útil de este cuadro.
 
@@ -351,14 +351,14 @@ Cada cuadro tiene un código de operación que determina cómo interpretar los d
 </pre>
 </p>
 
-### 2.4.5
+### 2-4-5
 #### Máscara
 
 Establecer este bit en 1 habilita el enmascaramiento . Los WebSockets requieren que toda la carga útil se ofusque con una clave aleatoria (la máscara) elegida por el cliente. La clave de enmascaramiento se combina con los datos de la carga útil mediante una operación XOR antes de enviar datos a la carga útil. Este enmascaramiento evita que los cachés malinterpreten los marcos de WebSocket como datos que se pueden almacenar en caché. ¿Por qué deberíamos evitar el almacenamiento en caché de los datos de WebSocket? Seguridad.
 
 Durante el desarrollo del protocolo WebSocket, se demostró que si se implementa un servidor comprometido y los clientes se conectan a ese servidor, es posible que los proxies intermedios o la infraestructura almacenen en caché las respuestas del servidor comprometido para que los futuros clientes que soliciten esos datos reciban la información. respuesta incorrecta. Este ataque se denomina envenenamiento de caché y es el resultado del hecho de que no podemos controlar cómo se comportan los proxies que se comportan mal en la naturaleza. Esto es especialmente problemático cuando se introduce un nuevo protocolo como WebSocket que tiene que interactuar con la infraestructura existente de Internet.
 
-### 2.4.6
+### 2-4-6
 #### Carga útil len
 
 El Payload lencampo y el Extended payload lengthcampo se utilizan para codificar la longitud total de los datos de carga útil para esta trama. Si los datos de la carga útil son pequeños (menos de 126 bytes), la longitud se codifica en el Payload lencampo. A medida que aumentan los datos de la carga útil, usamos los campos adicionales para codificar la longitud de la carga útil.
@@ -368,12 +368,12 @@ El Payload lencampo y el Extended payload lengthcampo se utilizan para codificar
 
 Como se discutió con el MASKbit, todas las tramas enviadas desde el cliente al servidor están enmascaradas por un valor de 32 bits que está contenido dentro de la trama. Este campo está presente si el bit de máscara se establece en 1 y está ausente si el bit de máscara se establece en 0.
 
-### 2.4.7
+### 2-4-7
 #### Datos de carga útil
 
 La Payload dataincluye datos de aplicaciones arbitrarias y cualquier dato de extensión que se ha negociado entre el cliente y el servidor. Las extensiones se negocian durante el protocolo de enlace inicial y le permiten extender el protocolo WebSocket para usos adicionales.
 
-###  2.5
+###  2-5
 #### Apertura de apretón de manos: Requisitos del cliente
 
    Para _Establecer una conexión WebSocket_, un cliente abre una conexión
@@ -657,7 +657,7 @@ La Payload dataincluye datos de aplicaciones arbitrarias y cualquier dato de ext
    se denominan _Cookies configuradas durante la apertura del servidor
    Apretón de manos_.
 
-### 2.6    
+### 2-6    
 #### Requisitos del lado del servidor
 
    Los servidores PUEDEN descargar la gestión de la conexión a otros agentes
@@ -726,7 +726,7 @@ La Payload dataincluye datos de aplicaciones arbitrarias y cualquier dato de ext
         cookies o solicitar autenticación a un servidor. Encabezado desconocido
         los campos se ignoran, según [ RFC2616 ].
 
-### 2.7    
+### 2-7    
 ##### Envío del protocolo de enlace de apertura del servidor
 
    Cuando un cliente establece una conexión WebSocket a un servidor, el
@@ -870,7 +870,7 @@ La Payload dataincluye datos de aplicaciones arbitrarias y cualquier dato de ext
        5. Opcionalmente, un | Sec-WebSocket-Protocol | campo de encabezado, con un
            value / subprotocol / como se define en el paso 4 de la Sección 4.2.2 .
           
-### 2.8          
+### 2-8          
 ### Cerrar una conexión de WebSocket: el protocolo de enlace de cierre de WebSocket
 
 Para cerrar una conexión WebSocket, se envía un marco de cierre (código de operación 0x08). Además del código de operación, el marco de cierre puede contener un cuerpo que indique el motivo del cierre. Si cualquiera de los lados de una conexión recibe una trama cerrada, debe enviar una trama cerrada en respuesta y no se deben enviar más datos a través de la conexión. Una vez que ambas partes han recibido la trama cerrada, la conexión TCP se interrumpe. El servidor siempre inicia el cierre de la conexión TCP.
