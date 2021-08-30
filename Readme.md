@@ -286,8 +286,10 @@ WebSocket es un protocolo enmarcado , lo que significa que un fragmento de datos
 +---------------------------------------------------------------+
 </pre>
 </p>
+
 ### 2-4-1
- #### Subprotocolos que utilizan el protocolo WebSocket
+
+#### Subprotocolos que utilizan el protocolo WebSocket
 
    El cliente puede solicitar que el servidor utilice un subprotocolo específico mediante
    incluido el | Sec-WebSocket-Protocol | campo en su apretón de manos. Si se
