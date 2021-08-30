@@ -31,9 +31,9 @@
     
 - [Cómo ejecutar los componentes de cada servidor](#4)    
     
--[Cómo ejecutar el/los clientes](#5)
+- [Cómo ejecutar el/los clientes](#5)
           
--[Documentación de un API de servicios ofrecidos por el Servidor.](#6)   
+- [Documentación de un API de servicios ofrecidos por el Servidor.](#6)   
           
 ### 1 
 ### Integrantes
