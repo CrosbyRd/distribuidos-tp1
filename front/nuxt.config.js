@@ -8,6 +8,13 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
+    axios: {
+      baseURL:
+        process.env.NODE_ENV === 'development'
+          ? 'http://localhost:5000/api'
+          : 'http://172.26.51.117:5000/api' // put in here your api production URL
+
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

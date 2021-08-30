@@ -31,7 +31,10 @@ namespace back
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services
+                .AddCors()
+                .AddControllers();
+            
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "back", Version = "v1" }); });
 
 
@@ -42,6 +45,7 @@ namespace back
 
             services.AddTransient<CamaController>()
                 .AddTransient<HospitalController>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +61,12 @@ namespace back
 
             app.UseHttpsRedirection();
 
+            app.UseCors(cors => cors
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:51549")
+                .AllowCredentials());
+            
             app.UseRouting();
 
             app.UseAuthorization();
@@ -66,6 +76,7 @@ namespace back
                 endpoints.MapControllers();
                 endpoints.MapHub<CentralHub>("/socket");
             });
+
 
             app.SeedTestData();
         }

@@ -28,6 +28,8 @@
 <script lang="ts">
 import Vuetify from "vuetify";
 import Vue from "vue";
+import  * as SignalR from '@microsoft/signalr';
+
 export default Vue.extend({
   data: () => ({
     actions: [
@@ -38,5 +40,16 @@ export default Vue.extend({
       {text: 'Ver el estado de todos los hospitales', value: 5}
     ]
   }),
+  mounted() {
+    let SignalRConnection = new SignalR.HubConnectionBuilder()
+    .withUrl('https://localhost:5001/socket')
+    .build()
+
+    SignalRConnection.on("EstadoRecibido", data => {
+      console.log(data);
+    });
+    SignalRConnection.start()
+      .then(() => SignalRConnection.invoke("VerEstadoActual"));
+  }
 })
 </script>
