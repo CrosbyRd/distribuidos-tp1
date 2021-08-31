@@ -64,7 +64,7 @@ namespace back
             app.UseCors(cors => cors
                 .AllowAnyMethod()
                 .AllowAnyHeader()
-                .WithOrigins("http://localhost:51549")
+                .WithOrigins("http://localhost:3000")
                 .AllowCredentials());
             
             app.UseRouting();
