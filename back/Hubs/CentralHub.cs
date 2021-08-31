@@ -25,6 +25,10 @@ namespace back.Hubs
             await Clients.User(currentUserId).SendAsync("EstadoRecibido", resultList);
         }
 
+        public async Task VerCamasDeUnHospital(int idHospital)
+        {
+            var hospital = await _hospitalController.VerCamasDeHospital(idHospital, CancellationToken.None);
+        }
         public async Task CrearHospital(string nombre)
         {
             var result = await _hospitalController.CrearHospital(nombre);

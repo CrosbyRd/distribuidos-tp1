@@ -76,5 +76,21 @@ namespace back.Controllers
                 return 2;
             }
         }
+        
+        public async Task<List<CamaModel>> VerCamasDeHospital(int idHospital, CancellationToken ct)
+        {
+            try
+            {
+                var camas = await _utiContext.Camas.Where(x => x.HospitalId == idHospital)
+                    .ProjectTo<CamaModel>(_mapper.ConfigurationProvider)
+                    .ToListAsync(ct);
+                return camas;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return new List<CamaModel>();
+            }
+        }
     }
 }
