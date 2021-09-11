@@ -74,6 +74,7 @@ export default Vue.extend({
     });
     SignalRConnection.on("CamaEliminada", data => {
       console.log("Cama Eliminada",data);
+      console.log("texto estatico");
     });
     SignalRConnection.on("CamaOcupada", data => {
       console.log("Cama ocupada",data);
