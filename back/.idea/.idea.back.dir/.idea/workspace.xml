@@ -8,22 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bae16f4-9bad-401c-be86-5e071c992d26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.back.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HospitalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HospitalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Hospital.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Hospital.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hubs/CentralHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hubs/CentralHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/UtiContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/UtiContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/HospitalModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/HospitalModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/back.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/back.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/back.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/back.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/back.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/back.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/back.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/back.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/back.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/back.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/back.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/back.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/back.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/back.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/back.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/back.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/back.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/back.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/back.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/back.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/back.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/back.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/back.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/back.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/pages/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +34,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E7BD73DA-3C64-40FB-B258-D36855A3F940/D2/EntityFrameworkServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BDD96C5F-630A-4529-8DAC-C07D80DEB23B/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2E9BEEB1-8083-4F4B-9ABE-A5F3DB1BC8BD/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -122,6 +111,7 @@
       <workItem from="1630162889837" duration="7359000" />
       <workItem from="1630431957458" duration="1407000" />
       <workItem from="1630447699289" duration="2099000" />
+      <workItem from="1631373801455" duration="706000" />
     </task>
     <task id="LOCAL-00001" summary="Fix socket connection">
       <created>1630347199054</created>
