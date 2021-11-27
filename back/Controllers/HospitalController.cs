@@ -31,6 +31,7 @@ namespace back.Controllers
                     Nombre = nombre
                 };
 
+                Console.WriteLine(nombre);
                 _utiContext.Hospitales.Add(newHospital);
 
                 await _utiContext.SaveChangesAsync();
